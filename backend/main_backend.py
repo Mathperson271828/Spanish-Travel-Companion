@@ -31,7 +31,7 @@ client = AsyncOpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # to send requests to this FastAPI backend (on port 8000)."
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", https://spanish-travel-companion-rnu2.vercel.app/], # Permits requests from your frontend
+    allow_origins=["http://localhost:3000","https://spanish-travel-companion-rnu2.vercel.app"], # Permits requests from your frontend
     allow_credentials=True,                  # Allows cookies/auth headers if needed
     allow_methods=["*"],                     # Permits all actions (GET, POST, etc.)
     allow_headers=["*"],                     # Permits all metadata headers
