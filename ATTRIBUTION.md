@@ -121,7 +121,7 @@ export default function Home() {
        * - headers: Informs the server that the body contains JSON data.
        * - body: Converts the JavaScript object { message: input } into a JSON string.
        */
-      const response = await fetch("http://localhost:8000/chat", {
+      const response = await fetch("https://spanish-travel-companion.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -396,7 +396,7 @@ const sendAudioToBackend = async (blob: Blob) => {
     formData.append("file", blob, "recording.webm");
 
     // 2. Send it to your NEW speech-to-text endpoint
-    const response = await fetch("http://localhost:8000/speech-to-text", {
+    const response = await fetch("https://spanish-travel-companion.onrender.com/speech-to-text", {
       method: "POST",
       body: formData, // No headers needed! The browser handles 'multipart/form-data' automatically.
     });
@@ -451,7 +451,7 @@ export default function Home() {
       const formData = new FormData();
       formData.append("file", blob, "audio.webm");
 
-      const response = await fetch("http://localhost:8000/speech-to-text", {
+      const response = await fetch("https://spanish-travel-companion.onrender.com/speech-to-text", {
         method: "POST",
         body: formData,
       });
@@ -637,7 +637,7 @@ const sendMessage = async (textOverride?: string) => {
   setLoading(true);
 
   try {
-    const response = await fetch("http://localhost:8000/chat", {
+    const response = await fetch("https://spanish-travel-companion.onrender.com/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -765,7 +765,7 @@ const [audioSpeed, setAudioSpeed] = useState<number>(1.0);
 
 const playAudioResponse = async (textToSpeak: string) => {
   try {
-    const response = await fetch("http://localhost:8000/text-to-speech", {
+    const response = await fetch("https://spanish-travel-companion.onrender.com/text-to-speech", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -960,7 +960,7 @@ let currentAudio: HTMLAudioElement | null = null;
 
 const playAudioResponse = async (textToSpeak: string) => {
   try {
-    const response = await fetch("http://localhost:8000/text-to-speech", {
+    const response = await fetch("https://spanish-travel-companion.onrender.com/text-to-speech", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -1168,7 +1168,7 @@ const stopRecording = () => {
 
   const playAudioResponse = async (textToSpeak: string) => {
   try {
-    const response = await fetch("http://localhost:8000/text-to-speech", {
+    const response = await fetch("https://spanish-travel-companion.onrender.com/text-to-speech", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ text: textToSpeak, speed: audioSpeed }),
@@ -1443,7 +1443,7 @@ const sendMessage = async (textOverride?: string) => {
   setInput(""); // Clear the text box so they can type again
 
   try {
-    const response = await fetch("http://localhost:8000/chat", {
+    const response = await fetch("https://spanish-travel-companion.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       // 2. Send the ENTIRE updated history array to the backend!
