@@ -62,7 +62,7 @@ export default function Home() {
        * - headers: Informs the server that the body contains JSON data.
        * - body: Converts the JavaScript object { message: input } into a JSON string.
        */
-      const response = await fetch("http://localhost:8000/chat", {
+      const response = await fetch("https://spanish-travel-companion.onrender.com/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -203,7 +203,7 @@ export default function Home() {
       formData.append("file", blob, "recording.webm")
       
       // 2. Send it to the new speech to text endpoint in the backend
-      const response = await fetch("http://localhost:8000/speech-to-text", {
+      const response = await fetch("https://spanish-travel-companion.onrender.com/speech-to-text", {
       method: "POST",
       body: formData,});
 
@@ -286,7 +286,7 @@ export default function Home() {
   };
   const playAudioResponse = async (textToSpeak: string) => {
   try {
-    const response = await fetch("http://localhost:8000/text-to-speech", {
+    const response = await fetch("https://spanish-travel-companion.onrender.com/text-to-speech", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
