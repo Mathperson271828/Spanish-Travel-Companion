@@ -1,8 +1,8 @@
-# 🛠️ Setup & Installation Guide
+## Setup & Installation Guide
 
 This guide provides the necessary steps to set up the **Spanish Travel Companion** locally and instructions for testing the integration with external APIs.
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before beginning, ensure you have the following installed:
 * **Node.js** (v18 or higher recommended)
@@ -11,7 +11,7 @@ Before beginning, ensure you have the following installed:
 
 ---
 
-## 🚀 Local Installation
+## Local Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -49,7 +49,7 @@ cd Spanish-Travel-Companion
 
 ---
 
-## 🔑 Environment Variables & API Configuration
+## Environment Variables & API Configuration
 
 This project relies on **OpenAI** for its core machine learning pipeline.
 
@@ -64,12 +64,12 @@ OPENAI_API_KEY=your_openai_key_here
 
 ---
 
-## 🏃 Running the Application
+## Running the Application
 
 ### Start the Backend
 From the `backend` directory:
 ```bash
-uvicorn main_backend:app --reload --host 0.0.0.0 --port 10000
+uvicorn main_backend:app --reload --port 8000
 ```
 
 ### Start the Frontend
@@ -79,6 +79,6 @@ npm run dev
 ```
 Open **http://localhost:3000** in your browser to interact with the application.
 
-## ⚠️ Known Limitations
+## Known Limitations
 * **Render Cold Start:** If testing the live production deployment hosted on Render's free tier, the initial request may take up to 50 seconds to process as the server wakes from sleep. Subsequent requests will process within 3-5 seconds.
 * **Microphone Permissions:** The browser must be granted microphone access for the Web Audio API and MediaRecorder to function.
