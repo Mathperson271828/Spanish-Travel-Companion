@@ -11,6 +11,6 @@ Quick Start: Follow these steps to launch the project locally:
 4. Launch Frontend: Start the Next.js development server with npm run dev in the frontend directory to access the UI and initialize the silence detection loop at http://localhost:3000.
 
 Video Links: 
-Technical Walkthrough: https://youtu.be/Bg_SOecNVDQ
+Technical Walkthrough: https://youtu.be/YReqcWIbM-0
 DEMO: https://youtu.be/YFrBAgL9dyU
 
